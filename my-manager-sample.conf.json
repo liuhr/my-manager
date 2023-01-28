@@ -1,0 +1,60 @@
+{
+  "Debug": true,
+  "ListenAddress": ":90",
+
+  "RaftEnabled": false,
+  "RaftDataDir": "./raftdata",
+  "RaftBind": "127.0.0.1:91",
+  "DefaultRaftPort": 91,
+  "RaftNodes": [
+     "127.0.0.1:91",
+     "127.0.0.1:92",
+     "127.0.0.1:93"
+  ],
+
+  "RaftNodesStatusCheckIntervalSeconds": 5,
+  "RaftNodesStatusAlertProcess": "python hubble_alarm.py --action='OrchAndMetaLinkage' --appKey='momo.mis.ops.dba.manager.orchestrator' --level=4 --msg='{msg}'",
+  
+  "RaftLeaderDomain": "mysql_node_rafter_leader.momo.com",
+  "DomainCheckIntervalSeconds":120,
+  "SwithDomainProcess":[],
+
+  "BackendDbHosts": "127.0.0.1",
+  "BackendDbPort":3306,
+  "BackendDbUser":"root",
+  "BackendDbPass":"123456",
+  "BackendDb":"metadb",
+
+  "InstancePollSeconds": 5,
+  "UnseenInstanceForgetHours": 240,
+  "SnapshotTopologiesIntervalHours": 0,
+  "InstanceBulkOperationsWaitTimeoutSeconds": 10,
+
+
+  "AuthenticationMethod": "basic",
+  "HTTPAuthUser": "sysuser",
+  "HTTPAuthPassword": "8w95fa8cw303fc220db1f4c77e2130bea0357302",
+  "AuthUserHeader": "",
+  "PowerAuthUsers": [
+    "*"
+  ],
+  "UseSSL": false,
+  "UseMutualTLS": false,
+  "SSLSkipVerify": false,
+  "SSLPrivateKeyFile": "",
+  "SSLCertFile": "",
+  "SSLCAFile": "",
+  "SSLValidOUs": [],
+  "URLPrefix": "",
+  "StatusEndpoint": "/api/status",
+  "StatusOUVerify": false,
+
+  "MySQLReadTimeoutSeconds":30,
+  "MySQLConnectTimeoutSeconds": 2,
+
+  "ApiEndpoint": "/api/rdb",
+  "Processes":[
+      {"key":"8a95da8cb304f", "param":"hostname,port" ,"runIntervalSeconds":"", "outputFlag":"1", "script":"python ./xx.py  --hostname '{hostname}' --port {port}"},
+      {"key":"8b95da8cb304g" ,"param":"path", "runIntervalSeconds":"", "outputFlag":"0", "script":"python ./zz.py  --path {path} &"}
+  ]
+}
