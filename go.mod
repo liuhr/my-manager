@@ -6,6 +6,7 @@ require (
 	github.com/armon/go-metrics v0.4.1 // indirect
 	github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0 // indirect
 	github.com/go-martini/martini v0.0.0-20170121215854-22fa46961aab
+	github.com/go-sql-driver/mysql v1.7.0
 	github.com/hashicorp/go-msgpack v1.1.6 // indirect
 	github.com/hashicorp/raft v0.0.0-00010101000000-000000000000
 	github.com/howeyc/gopass v0.0.0-20190910152052-7cb4b85ec19c

@@ -6,6 +6,7 @@ import (
 	"strings"
 	"sync"
 
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/github/my-manager/config"
 	"github.com/openark/golib/log"
 	"github.com/openark/golib/sqlutils"
